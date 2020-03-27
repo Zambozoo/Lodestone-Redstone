@@ -3,7 +3,7 @@ execute store result entity @s Pos[0] double 1 run scoreboard players get x lode
 execute store result entity @s Pos[1] double 1 run scoreboard players get y lodestone
 execute store result entity @s Pos[2] double 1 run scoreboard players get z lodestone
 
-execute if score x2 lodestone <= #sq1 lodestone run function lodestone:power/15
+execute if score x2 lodestone > #sq0 lodestone if score x2 lodestone <= #sq1 lodestone run function lodestone:power/15
 execute if score x2 lodestone > #sq1 lodestone if score x2 lodestone <= #sq2 lodestone run function lodestone:power/14
 execute if score x2 lodestone > #sq2 lodestone if score x2 lodestone <= #sq3 lodestone run function lodestone:power/13
 execute if score x2 lodestone > #sq3 lodestone if score x2 lodestone <= #sq4 lodestone run function lodestone:power/12
@@ -18,6 +18,7 @@ execute if score x2 lodestone > #sq11 lodestone if score x2 lodestone <= #sq12 l
 execute if score x2 lodestone > #sq12 lodestone if score x2 lodestone <= #sq13 lodestone run function lodestone:power/3
 execute if score x2 lodestone > #sq13 lodestone if score x2 lodestone <= #sq14 lodestone run function lodestone:power/2
 execute if score x2 lodestone > #sq14 lodestone run function lodestone:power/1
+execute if score x2 lodestone < #sq0 lodestone run function lodestone:power/1
 
 execute at @s run setblock ~ ~ ~ minecraft:lodestone
 

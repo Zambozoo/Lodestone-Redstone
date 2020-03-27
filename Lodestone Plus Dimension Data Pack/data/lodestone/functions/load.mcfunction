@@ -1,5 +1,6 @@
 #Add scoreboard
 scoreboard objectives add lodestone dummy
+scoreboard players set #sq0 lodestone 0
 scoreboard players set #sq1 lodestone 1
 scoreboard players set #sq2 lodestone 4
 scoreboard players set #sq3 lodestone 9
@@ -14,6 +15,9 @@ scoreboard players set #sq11 lodestone 121
 scoreboard players set #sq12 lodestone 144
 scoreboard players set #sq13 lodestone 169
 scoreboard players set #sq14 lodestone 196
+
+scoreboard players set #max lodestone 32786
+scoreboard players set #min lodestone -32786
 
 #Display message
 tellraw @a ["",{"text":"["},{"text":"Lodestone Redstone Datapack","color":"gray"},{"text":"] Loaded!\n Lodestones now emit a redstone signal that varies with distance if compasses that point to it are held in the same dimension."}]

@@ -10,21 +10,12 @@ execute store result score pz lodestone run data get entity @s Pos[2]
 # Store Player position, calculate distance from lodestone in x2
 scoreboard players operation x2 lodestone = x lodestone
 scoreboard players operation x2 lodestone -= px lodestone
-scoreboard players operation x2 lodestone *= x2 lodestone
-
-scoreboard players operation y2 lodestone = y lodestone
-scoreboard players operation y2 lodestone -= py lodestone
-scoreboard players operation y2 lodestone *= y2 lodestone
 
 scoreboard players operation z2 lodestone = z lodestone
 scoreboard players operation z2 lodestone -= pz lodestone
-scoreboard players operation z2 lodestone *= z2 lodestone
 
-scoreboard players operation x2 lodestone += y2 lodestone
-scoreboard players operation x2 lodestone += z2 lodestone
+scoreboard players set flag lodestone 1
+execute if score x2 lodestone < #max lodestone if score x2 lodestone > #min lodestone if score z2 lodestone < #max lodestone if score z2 lodestone > #min lodestone run scoreboard players set flag lodestone 0
 
-
-#Spawn AEC, run power.
-execute at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:[lodestone]}
-
-execute as @e[type=minecraft:area_effect_cloud,tag=lodestone,limit=1] run function lodestone:power
+execute if score flag lodestone matches 0 run function lodestone:get_distance
+execute if score flag lodestone matches 1 run function lodestone:overflow
