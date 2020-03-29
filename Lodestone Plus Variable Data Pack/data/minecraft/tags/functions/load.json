@@ -1,6 +1,0 @@
-{
-    "values": [
-        "lodestone:load",
-		"lodestone:tick"
-    ]
-}
