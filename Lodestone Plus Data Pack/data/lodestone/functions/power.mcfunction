@@ -32,4 +32,4 @@ execute if score x2 lodestone < #r11 lodestone if score x2 lodestone >= #r10 lod
 execute if score x2 lodestone < #r12 lodestone if score x2 lodestone >= #r11 lodestone run setblock ~ ~ ~ minecraft:target[power=4]
 execute if score x2 lodestone < #r13 lodestone if score x2 lodestone >= #r12 lodestone run setblock ~ ~ ~ minecraft:target[power=3]
 execute if score x2 lodestone < #r14 lodestone if score x2 lodestone >= #r13 lodestone run setblock ~ ~ ~ minecraft:target[power=2]
-execute if score x2 lodestone >= #r14 lodestone run setblock ~ ~ ~ minecraft:target[power=1]
+execute if score x2 lodestone < #r15 lodestone if score x2 lodestone >= #r14 lodestone run setblock ~ ~ ~ minecraft:target[power=1]

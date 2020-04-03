@@ -1,6 +1,5 @@
 # Store number of netherite_block in range of lodestone with netherite
-scoreboard players set netherite lodestone 0
-execute if block ~-1 ~-1 ~-1 minecraft:netherite_block run scoreboard players add netherite lodestone 1
+execute store success score netherite lodestone if block ~-1 ~-1 ~-1 minecraft:netherite_block
 execute if block ~0 ~-1 ~-1 minecraft:netherite_block run scoreboard players add netherite lodestone 1
 execute if block ~1 ~-1 ~-1 minecraft:netherite_block run scoreboard players add netherite lodestone 1
 execute if block ~-1 ~0 ~-1 minecraft:netherite_block run scoreboard players add netherite lodestone 1
