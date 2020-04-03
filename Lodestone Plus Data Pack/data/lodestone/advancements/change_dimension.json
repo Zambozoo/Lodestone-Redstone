@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "overworld": {
+            "trigger": "minecraft:changed_dimension"
+        }
+    },
+    "rewards": {
+        "function": "lodestone:dimension/set"
+    }
+}

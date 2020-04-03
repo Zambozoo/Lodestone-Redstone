@@ -4,7 +4,7 @@ execute store result entity @s Pos[1] double 1 run scoreboard players get y lode
 execute store result entity @s Pos[2] double 1 run scoreboard players get z lodestone
 
 #If block is lodestone, might not be if broken while holding compass, continue
-execute at @s if block ~ ~ ~ minecraft:lodestone run function lodestone:count_netherite
+execute at @s if block ~ ~ ~ minecraft:lodestone run function lodestone:range/get
 
 #Kill AEC
 kill @s

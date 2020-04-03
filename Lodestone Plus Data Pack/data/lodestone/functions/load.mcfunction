@@ -1,4 +1,6 @@
-#Add scoreboard
+#Add scoreboards
+scoreboard objectives add lodestone_death deathCount
+
 scoreboard objectives add lodestone dummy
 scoreboard players set #2 lodestone 2
 scoreboard players set #16 lodestone 16
@@ -22,6 +24,9 @@ scoreboard players set #r15 lodestone 225
 
 scoreboard players set #max lodestone 32786
 scoreboard players set #min lodestone -32786
+
+# Set dimension for each player
+execute as @a run function lodestone:dimension/set
 
 #Display message
 tellraw @a ["",{"text":"["},{"text":"Lodestone Redstone Datapack","color":"gray"},{"text":"] Loaded!\n Lodestones now emit a redstone signal that varies with distance if compasses that point to it are held in the same dimension."}]

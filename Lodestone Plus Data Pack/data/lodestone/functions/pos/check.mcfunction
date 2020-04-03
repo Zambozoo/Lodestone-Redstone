@@ -1,0 +1,2 @@
+execute store success score has_pos lodestone store result score x lodestone run data get entity @s SelectedItem.tag.LodestonePos.X
+execute if score has_pos lodestone matches 1 run function lodestone:pos/get

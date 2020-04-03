@@ -31,6 +31,6 @@ execute if score netherite lodestone >= #20 lodestone run setblock ~ ~ ~ minecra
 execute if score netherite lodestone >= #20 lodestone run setblock ~ ~ ~ minecraft:target[power=1]
 
 # If !overflow run power, happens at distance^2 == 65536^2 so we avoid that at (dx||dz)==32768
-execute if score x2 lodestone < #max lodestone if score x2 lodestone > #min lodestone if score z2 lodestone < #max lodestone if score z2 lodestone > #min lodestone run function lodestone:power
+execute if score x2 lodestone < #max lodestone if score x2 lodestone > #min lodestone if score z2 lodestone < #max lodestone if score z2 lodestone > #min lodestone run function lodestone:range/check
 
 setblock ~ ~ ~ minecraft:lodestone
